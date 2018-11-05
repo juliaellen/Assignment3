@@ -14,3 +14,7 @@ myapp <- oauth_app(appname = "Assignment3",
 
 github_token1 <- oauth2.0_token(oauth_endpoints("github"), GithubApp)
 myToken <- config(token = github_token1)
+
+data1 <- fromJSON("https://api.github.com/users/juliaellen/followers")
+id = data1$login
+UserIds = c(id) 
